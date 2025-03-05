@@ -54,8 +54,14 @@ STATE_VICTORY = 'victory'
 # Home UI layout
 
 BUTTON_SOURCE = r"D:/HCMUS_2023-2024/Artificial_Inteligent/Pac_Man_Clone/Assets/UI_Context/button.png"
-BUTTON = pygame.image.load(BUTTON_SOURCE)   
 
 
 HOME_WIDTH, HOME_HEIGHT = WINDOW_WIDTH, WINDOW_HEIGHT
+
+BUTTON_ORIGIN = pygame.image.load(BUTTON_SOURCE)   
+BUTTON = BUTTON_ORIGIN.copy()
+
+# START BUTTON INFO
 START_BUTTON = BUTTON.get_rect(center=(WINDOW_WIDTH//2, WINDOW_HEIGHT//2 - 100))
+START_BUTTON_RECT = pygame.Rect(START_BUTTON)
+START_BUTTON_HOVERED = False
